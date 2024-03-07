@@ -6,13 +6,15 @@ This is a classic Snake Game implemented in Kotlin using Jetpack Compose for the
 ## Features:
 - **Jetpack Compose:** The app leverages *Jetpack Compose*, a modern Android UI toolkit, to create a seamless and interactive user experience.
 - **Kotlin:** Developed entirely in *Kotlin*, the codebase benefits from the conciseness and expressiveness of the language, promoting efficient and readable code.
+- **Custom Canvas Rendering:** Leveraged Canvas to create dynamic graphics and animations,enhancing the game's visual appeal.
+- **Dynamic Sound Effects:** Integrated MediaPlayer to provide players with an immersive auditory experience, triggering sound effects upon game over.
 - **Scoring System:** Keep track of your score as you consume food and grow the snake
 - **Game Over Detection:** Detect collisions with the snake's body to end the game.
 
 
 
 
-### Screenshots:
+## Screenshots:
 <table>
   <tr>
     <td><img src="https://github.com/AhmedGamalRamadan/SnakeGameCompose/assets/144063315/7bb0afcb-7489-4f0c-880c-7044e2cddfbc" alt="splash" width="230"></td>
