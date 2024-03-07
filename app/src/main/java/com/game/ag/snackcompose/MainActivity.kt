@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.game.ag.snackcompose.ui.theme.SnackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -15,9 +14,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SnackComposeTheme {
 
-
-               // val viewModel:SnakeGameViewModel by viewModels()
-                val viewModel = viewModel<SnakeGameViewModel>()
+                val viewModel:SnakeGameViewModel by viewModels()
                 val state by viewModel.state.collectAsStateWithLifecycle()
                 SnakeGameScreen(
                     state = state,

@@ -10,15 +10,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -29,16 +25,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.imageResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import com.game.ag.snackcompose.ui.theme.Black
 import com.game.ag.snackcompose.ui.theme.Citrine
 import com.game.ag.snackcompose.ui.theme.Custard
 
@@ -57,20 +52,15 @@ fun SnakeGameScreen(
     }
 
     val context = LocalContext.current
-    val foodSoundMP = remember { MediaPlayer.create(context, R.raw.food) }
-    val gameOverSoundMP = remember { MediaPlayer.create(context, R.raw.gameover) }
 
-    LaunchedEffect(key1 = state.snake.size) {
-        if (state.snake.size != 1) {
-            foodSoundMP?.start()
-        }
-    }
+    val gameOverSoundMP = remember { MediaPlayer.create(context, R.raw.gameover) }
 
     LaunchedEffect(key1 = state.isGameOver) {
         if (state.isGameOver) {
             gameOverSoundMP?.start()
         }
     }
+
 
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -80,7 +70,8 @@ fun SnakeGameScreen(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.SpaceAround
         ) {
-            Card(
+
+            Row(
                 modifier = Modifier
                     .padding(8.dp)
                     .fillMaxWidth()
@@ -90,6 +81,8 @@ fun SnakeGameScreen(
                     text = "Score: ${state.snake.size - 1}",
                     style = MaterialTheme.typography.headlineMedium
                 )
+
+
             }
             Canvas(
                 modifier = Modifier
@@ -108,7 +101,7 @@ fun SnakeGameScreen(
                 drawGameBoard(
                     cellSize = cellSize,
                     cellColor = Custard,
-                    borderCellColor = Black,
+                    borderCellColor = Red,
                     gridWidth = state.xAxisGridSize,
                     gridHeight = state.yAxisGridSize
                 )
@@ -160,6 +153,7 @@ fun SnakeGameScreen(
             Text(
                 modifier = Modifier.padding(16.dp),
                 text = "Game Over",
+                color = Red,
                 style = MaterialTheme.typography.displayMedium
             )
         }
