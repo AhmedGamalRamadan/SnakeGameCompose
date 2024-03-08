@@ -20,7 +20,10 @@ This is a classic Snake Game implemented in Kotlin using Jetpack Compose for the
     <td><img src="https://github.com/AhmedGamalRamadan/SnakeGameCompose/assets/144063315/7bb0afcb-7489-4f0c-880c-7044e2cddfbc" alt="splash" width="250"></td>
     <td><img src="https://github.com/AhmedGamalRamadan/SnakeGameCompose/assets/144063315/9f0390d2-96de-4f66-b786-4b126e1c2bd2" alt="splash" width="250"></td>
     <td><img src="https://github.com/AhmedGamalRamadan/SnakeGameCompose/assets/144063315/34db38e0-75c7-426b-8815-e3023d37fd47" alt="splash" width="250"></td>
-   <td><img src="https://github.com/AhmedGamalRamadan/SnakeGameCompose/assets/144063315/393b5c0c-9228-466c-8f52-f8724619b537" alt="splash" width="250"></td>
+   
+  </tr>
+ <tr>
+<td><img src="https://github.com/AhmedGamalRamadan/SnakeGameCompose/assets/144063315/393b5c0c-9228-466c-8f52-f8724619b537" alt="splash" width="250"></td>
     <td><img src="https://github.com/AhmedGamalRamadan/SnakeGameCompose/assets/144063315/3ae340da-a09c-4f3c-891f-e543194cd7bd" alt="splash" width="250"></td>
   </tr>
 </table>
